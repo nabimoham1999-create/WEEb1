@@ -1,0 +1,205 @@
+/* General Reset */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background-color: grey;
+  color: #333;
+}
+
+/* Header */
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5em ;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  margin: 0.5em 0;
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+
+#but1, #but2, #but3{
+    text-align: center;
+    font-size: 20px;
+    width: 120px;
+    background-color:  grey;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+
+/* Portfolio Container */
+
+.portfolio-container {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Cards */
+
+.project-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  color: #222;
+  margin: 15px 0 10px;
+}
+
+.project-card p {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #0077b6;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+  background-color: #00b4d8;
+}
+
+/* Footer */
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #00b4d8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*responsiveness*/
+
+
+/* 📱 For small phones (≤375px) */
+@media (max-width: 375px) {
+  header {
+    padding: 0.8em;
+  }
+
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  header p {
+    font-size: 0.9em;
+  }
+
+  .portfolio-container {
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px;
+    padding: 15px 5px;
+  }
+
+  .project-card {              
+    padding: 15px;
+  }
+
+  .project-card h3 {
+    font-size: 1.1em;
+  }
+
+  .project-card p {
+    font-size: 0.9em;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 0.8em 0;
+  }
+}
+
+/* 📱 For tablets (≤768px) */
+@media (min-width: 376px) and (max-width: 768px) {
+  header {
+    padding: 1em;
+  }
+
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  #but1,
+  #but2,
+  #but3 {
+    width: 100px;
+    font-size: 18px;
+  }
+
+  
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .portfolio-container {
+    gap: 25px;
+    padding: 30px 15px;
+  }
+
+  .project-card {
+    width: 280px; 
+  }
+}
+
+
+}

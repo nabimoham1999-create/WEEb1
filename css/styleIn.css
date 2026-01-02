@@ -1,0 +1,177 @@
+/* Base Layout */
+header {
+  text-align: center;
+  font-size: 30px;  
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  margin: 0;
+}
+
+body {
+  background: rgba(128, 128, 128, 0.701);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN CONTAINNER */
+
+.whole {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/*About Me Container */
+
+.abtme {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  max-width: 900px;
+  width: 100%;
+  margin: 30px auto;
+  background: white;
+  box-shadow: 0 0 10px black;
+  border-radius: 8px; /*Optional: smooth corners */
+  overflow: hidden;
+}
+
+/*Left Section*/
+
+.left-section {
+  background-color: grey;
+  padding: 20px;
+  text-align:center;
+}
+
+/*Right Section*/
+
+.right-section {
+  background-color: rgba(128, 128, 128, 0.815);
+  text-align: justify;
+  padding: 20px;
+}
+
+/*Buttons*/
+
+.button {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+#but1, #but2,#but3 {
+  width: 120px;
+  font-size: 20px;
+  background-color: grey;
+  line-height: 1.6;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+}
+
+
+/*Name Box*/
+
+.me {
+  font-size: 30px;
+  background-color: grey;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto; /*Centers name box*/
+}
+
+/*Paragraph Text*/
+
+p {
+  font-size: large;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN  */
+
+
+/* Small Phones (≤375px) */
+
+@media (max-width: 375px) {
+  
+
+  .abtme {
+    grid-template-columns: 1fr;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .button {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* Keep button design and font same, just auto-fit */
+
+  #but1, #but2, #but3 {
+    width: 100px;
+  }
+
+  .me {
+    width: 100%;
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+
+/* for(≤768px) */
+
+@media  (min-width: 376px) and (max-width: 768px) {
+  header {
+    font-size: 26px;
+  }
+
+  .abtme {
+    grid-template-columns: 1fr;
+    max-width: 95%;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .me {
+    width: 100%;
+    font-size: 26px;
+  }
+}
+
+/*(769px – 1024px) */
+
+@media (min-width :769px) and (max-width:1024px) {
+  .abtme {
+    grid-template-columns: 1fr;      
+    max-width: 95%;
+  }
+
+  .me {
+    width: 100%;              
+    font-size: 26px;          
+  }
+
+  .right-section {    
+    padding: 15px;
+  }
+}
+
